@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8"/>
+	<title>Restaurante</title>
+	<link rel="StyleSheet" href="estilos.css" type="text/css">
+	<link rel="icon" type="image/png" sizes="16x16"  href="imagenes/faviconRestaurante.png">
+	<style>
+		h1{
+			text-align:center;
+			text-shadow:2px 2px 5px white;
+			animation:texto 3s;
+		}
+		
+		@keyframes texto{
+			from{transform:scale(2,2);}
+		}
+	
+		article{
+			display:flex;
+			justify-content:space-around;
+			margin:50px;
+			flex-wrap:wrap;
+			animation:entrada 5s;
+		}
+		
+		@keyframes entrada{
+			from{opacity:0;}
+		}
+		
+		article h2{
+			text-align:center;
+		}
+		
+		article div{
+			width:25%;
+			margin:20px;
+			opacity:0.8;
+		}
+		
+		article div:hover{
+			border-radius:50px;
+			transform:scale(1.2,1.2);
+			opacity:1;
+		}
+
+		
+		img.grande{
+			width:100%;
+		}
+		
+		main img{
+			width:10%;
+		}
+		
+		span{
+			color:#A9A9A9;
+		}
+		
+		span span{
+			color:#DEDE00;
+			font-size:80%;
+		}
+		
+		main > p{
+			text-align:center;
+		}
+		
+		div.alergenos{
+			display:flex;
+			align-items:center;
+			justify-content:space-around;
+		}
+		
+		div.alergenos div{
+			width:20%;
+			text-align:center;
+		}
+		
+		div.alergenos img{
+			width:20%;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<img class="inicio" src="imagenes/fondo2.png"/>
+		<div>
+			<a href="index.html">Inicio</a>
+			<div class="contenedor">
+				<a href="Cartelera.html">Cartelera</a>
+				<div class="contenido">
+					<a href="Accion.html">Acción</a><br/>
+					<a href="Infantil.html">Infantil</a><br/>
+					<a href="Terror.html">Terror</a><br/>
+					<a href="Clasicos.html">Clásicos</a><br/>
+					<a href="Comedia.html">Comedia</a>
+				</div>
+			</div>
+			<a class="actual" href="Restaurante.html">Restaurante</a>
+			<a href="Pedido.html">Pedido</a>
+		</div>
+	</header>
+	
+	<main>
+		<h1>Aperitivos</h1>
+		
+		<article>
+			<div>
+				<h2>Refrescos</h2>
+				<img class="grande" src="imagenes/refrescos.png"/>
+				<ol>
+					<li><span>Agua <span>1€</span></span></li>
+					<li><span>Coca-cola<span> 1.5€</span><span></li>
+					<li><span>Fanta naranja/limón <span>1.5€</span></span></li>
+					<li><span>Nestea <span>1.5€</span></span></li>
+					<li><span>Aquarius <span>1.5€</span></span></li>
+				</ol>
+			</div>
+			
+			<div>
+				<h2>Palomitas</h2>
+				<img class="grande" src="imagenes/palomita.jpg"/>
+				<ol>
+					<li><span>Saladas <span>2.5€</span></span><img src="imagenes/gluten.png"/></li>
+					<li><span>Mantequilla <span>2.5€</span></span><img src="imagenes/gluten.png"/></li>
+					<li><span>Caramelo <span>2.5€</span></span><img src="imagenes/gluten.png"/></li>
+					<li><span>Cheddar <span>2.5€</span></span><img src="imagenes/gluten.png"/><img src="imagenes/lacteo.png"/></li>
+				</ol>
+			</div>
+			
+			<div>
+				<h2>Gominolas</h2>
+				<img class="grande" src="imagenes/gominolas.jpg"/>
+				<ol>
+					<li><span>Bolsa de gominolas <span>1€</span></span></li>
+					<li><span>Regalices <span>1€</span></span></li>
+					<li><span>Snacks <span>1.5€</span></span></li>
+					<li><span>Chocolatina <span>1.5€</span></span></li>
+				</ol>
+			</div>
+		</article>
+		
+		<h1>Restaurante</h1>
+		
+		<article>
+			<div>
+				<h2>Hamburguesas</h2>
+				<img class="grande" src="imagenes/hamburguesa.jpg"/>
+				<ol>
+					<li><span>Simple <span>3.5€</span></span><img src="imagenes/gluten.png"/><img src="imagenes/lacteo.png"/></li>
+					<li><span>Doble <span>4€</span></span><img src="imagenes/gluten.png"/><img src="imagenes/huevo.png"/><img src="imagenes/lacteo.png"/></li>
+					<li><span>Especial <span>4.5€</span></span><img src="imagenes/gluten.png"/><img src="imagenes/huevo.png"/><img src="imagenes/lacteo.png"/></li>
+					<li><span>Vegetal <span>3.5€</span><img src="imagenes/cascara.png"/></li>
+				</ol>
+			</div>
+			
+			<div>
+				<h2>Pizzas</h2>
+				<img class="grande" src="imagenes/pizza.jpg"/>
+				<ol>
+					<li><span>Cuatro quesos <span>4.5€</span></span><img src="imagenes/gluten.png"/><img src="imagenes/lacteo.png"/></li>
+					<li><span>Jamon y queso <span>4.5€</span></span><img src="imagenes/gluten.png"/><img src="imagenes/lacteo.png"/></li>
+					<li><span>Barbacoa <span>4.5€</span></span><img src="imagenes/gluten.png"/><img src="imagenes/lacteo.png"/></li>
+					<li><span>Vegetal <span>4.5€</span></span><img src="imagenes/lacteo.png"/><img src="imagenes/cascara.png"/></li>
+				</ol>
+			</div>
+			
+			<div>
+				<h2>Perritos</h2>
+				<img class="grande" src="imagenes/perrito.jpg"/>
+				<ol>
+					<li><span>Con salsa <span>2.5€</span></span><img src="imagenes/gluten.png"/></li>
+					<li><span>Con salsa y queso <span>3€</span></span><img src="imagenes/gluten.png"/><img src="imagenes/lacteo.png"/></li>
+					<li><span>Especial <span>3.5€</span></span><img src="imagenes/gluten.png"/><img src="imagenes/lacteo.png"/></li>
+					<li><span>Vegetal <span>3€</span></span><img src="imagenes/gluten.png"/></li>
+				</ol>
+			</div>
+			
+			<div>
+				<h2>Bocadillos</h2>
+				<img class="grande" src="imagenes/bocadillo.png"/>
+				<ol>
+					<li><span>Pollo alioli <span>3.5€</span></span><img src="imagenes/gluten.png"/><img src="imagenes/lacteo.png"/></li>
+					<li><span>Lomo <span>3.5€</span></span><img src="imagenes/gluten.png"/></li>
+					<li><span>Bacon queso <span>3.5€</span></span><img src="imagenes/gluten.png"/><img src="imagenes/lacteo.png"/></li>
+					<li><span>Vegetal <span>3.5€</span></span><img src="imagenes/cascara.png"/></li>
+				</ol>
+			</div>
+			
+			<div>
+				<h2>Raciones</h2>
+				<img class="grande" src="imagenes/racion.jpg"/>
+				<ol>
+					<li><span>Patatas con salsa <span>2.5€</span></span></li>
+					<li><span>Croquetas <span>3.5€</span></span><img src="imagenes/gluten.png"/></li>
+					<li><span>Calamares <span>3.5€</span></span><img src="imagenes/gluten.png"/></li>
+					<li><span>Alitas de pollo <span>3€</span></span><img src="imagenes/gluten.png"/></li>
+				</ol>
+			</div>
+		</article>
+		
+		<div class="alergenos">
+			<div>
+				<img src="imagenes/gluten.png"/>
+				<p>Contiene gluten</p>
+			</div>
+			<div>
+				<img src="imagenes/huevo.png"/>
+				<p>Contiene huevo</p>
+			</div>
+			<div>
+				<img src="imagenes/lacteo.png"/>
+				<p>Contiene lácteos</p>
+			</div>
+			<div>
+				<img src="imagenes/cascara.png"/>
+				<p>Contiene frutos de cáscara</p>
+			</div>
+		</div>
+	</main>
+	
+	<footer>
+		<div class="todo">
+			<div>
+				<h2>Nuestras redes</h2>
+				<a href="https://twitter.com/CCinasa">Twitter</a><br/>
+				<a href="https://www.instagram.com/cinecinasa/">Instagram</a><br/>
+				<a href="https://www.facebook.com/profile.php?id=100080221811463">Facebok</a><br/>
+			</div>
+			
+			<div>
+				<h2>Ayuda</h2>
+				<p>Atención al cliente</p>
+				<p>Aviso legal</p>
+				<p>Política de Privacidad</p>
+			</div>
+		</div>
+		<address><img src="imagenes/copyright.png"/> El copyright de los posters y tráilers pertenecen a las correspondientes productoras y/o distribuidoras.</address>
+	</footer>
+</body>
+</html>
+

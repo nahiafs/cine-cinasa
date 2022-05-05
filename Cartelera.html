@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8"/>
+	<title>Cartelera</title>
+	<link rel="StyleSheet" href="estilos.css" type="text/css">
+	<link rel="icon" type="image/png" sizes="16x16"  href="imagenes/favicon2.png">
+	<style>
+		article{
+			display:flex;
+			flex-wrap:wrap;
+			text-align:center;
+			justify-content:space-around;
+		}
+		
+		article div{
+			width:20%;
+			margin:5%;
+		}
+		
+		article div a{
+			width:100%;
+			animation:tipo 2s;
+		}
+		
+		article div h2{
+			animation:letra 2s;
+		}
+		
+		@keyframes tipo{
+			0%{transform:rotate(0deg);}
+			100%{transform:rotate(360deg);}
+		}
+		
+		@keyframes letra{
+			0%{font-size:150%;}
+			50%{font-size:200%;}
+			100%{font-size:150%;}
+		}
+		
+		article div:hover a{
+			background:white;
+			box-shadow:0 0 10px 10px white;
+		}
+		
+		article div:hover h2{
+			transform:scale(1.5, 1.5);
+		}
+		
+		main h1{
+			text-align:center;
+			text-shadow:2px 2px 5px white;
+		}
+		
+		main p{
+			text-align:center;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<img class="inicio" src="imagenes/fondo2.png"/>
+		<div>
+			<a href="index.html">Inicio</a>
+			<div class="contenedor">
+				<a class="actual" href="Cartelera.html">Cartelera</a>
+				<div class="contenido">
+					<a href="Accion.html">Acción</a><br/>
+					<a href="Infantil.html">Infantil</a><br/>
+					<a href="Terror.html">Terror</a><br/>
+					<a href="Clasicos.html">Clásicos</a><br/>
+					<a href="Comedia.html">Comedia</a>
+				</div>
+			</div>
+			<a href="Restaurante.html">Restaurante</a>
+			<a href="Pedido.html">Pedido</a>
+		</div>
+	</header>
+	
+	<main>
+		<h1>Categorías</h1>
+		<p>¡Elige tu categoría favorita!</p>
+	
+		<article>
+			<div>
+				<a href="Accion.html"><img src="imagenes/accion.png"/></a>
+				<h2>Acción</h2>
+			</div>
+			<div>
+				<a href="Infantil.html"><img src="imagenes/infantil.png"/></a>
+				<h2>Infantil</h2>
+			</div>
+			<div>
+				<a href="Terror.html"><img src="imagenes/terror.jpg"/></a>
+				<h2>Terror</h2>
+			</div>
+			<div>
+				<a href="Clasicos.html"><img src="imagenes/clasicos.png"/></a>
+				<h2>Clásicos</h2>
+			</div>
+			<div>
+				<a href="Comedia.html"><img src="imagenes/comedia.png"/></a>
+				<h2>Comedia</h2>
+			</div>
+		</article>
+	</main>
+	
+	<footer>
+		<div class="todo">
+			<div>
+				<h2>Nuestras redes</h2>
+				<a href="https://twitter.com/CCinasa">Twitter</a><br/>
+				<a href="https://www.instagram.com/cinecinasa/">Instagram</a><br/>
+				<a href="https://www.facebook.com/profile.php?id=100080221811463">Facebok</a><br/>
+			</div>
+			
+			<div>
+				<h2>Ayuda</h2>
+				<p>Atención al cliente</p>
+				<p>Aviso legal</p>
+				<p>Política de Privacidad</p>
+			</div>
+		</div>
+		<address><img src="imagenes/copyright.png"/> El copyright de los posters y tráilers pertenecen a las correspondientes productoras y/o distribuidoras.</address>
+	</footer>
+</body>
+</html>

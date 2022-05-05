@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8"/>
+	<title>Pedido</title>
+	<link rel="StyleSheet" href="estilos.css" type="text/css">
+	<link rel="icon" type="image/png" sizes="16x16"  href="imagenes/faviconPedido.png">
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<style>
+		form{
+			width:50%;
+			margin:auto;
+			height:850px;
+			overflow:hidden;
+			animation:formulario 2s;
+		}
+		
+		@keyframes formulario{
+			from{opacity:0; width:100%;}
+		}
+		
+		#uno,#dos,#tres{
+			width:80%;
+			height:100%;
+			padding:20px 30px;
+			margin:0 10%;
+			position:relative;
+			text-align:center;
+			background:white;
+			border-radius:20px;
+			box-sizing:border-box;
+		}
+
+		input, select{
+			padding:15px;
+			border:1px solid #ccc;
+			border-radius:10px;
+			margin-bottom:10px;
+			width:100%;
+			box-sizing:border-box;
+			font-size:100%;
+		}
+		
+		span{
+			color:black;
+			font-size:100%;
+		}
+		
+		form a, input.boton{
+			text-decoration:none;
+			width:100px;
+			background:#27AE60;
+			color:white;
+			border-radius:10px;
+			cursor:pointer;
+			padding:10px 5px;
+			margin:10px 5px;
+		}
+		
+		form a:hover, form a:focus {
+			box-shadow:0 0 0 2px white, 0 0 0 3px #27AE60;
+		}
+		
+		form h2{
+			font-size:150%;
+			color:#2C3E50;
+			margin-bottom:10px;
+		}
+		
+		input.boton:hover, input.boton:focus {
+			box-shadow:0 0 0 2px white, 0 0 0 3px #27AE60;
+			background:#27AE60;
+		}
+		
+		input:hover, select:hover{
+			background:#F3F3F3;
+		}
+		
+		div.barra div{
+			display:inline-block;
+			color:black;
+			background:white;
+			width:25px;
+			padding:10px;
+		}
+		
+		div.barra div:nth-child(odd){
+			margin-left:10%;
+			margin-right:10%;
+		}
+		
+		div.barra div.actual{
+			color:white;
+			background:#27AE60;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<img class="inicio" src="imagenes/fondo2.png"/>
+		<div>
+			<a href="index.html">Inicio</a>
+			<div class="contenedor">
+				<a href="Cartelera.html">Cartelera</a>
+				<div class="contenido">
+					<a href="Accion.html">Acción</a><br/>
+					<a href="Infantil.html">Infantil</a><br/>
+					<a href="Terror.html">Terror</a><br/>
+					<a href="Clasicos.html">Clásicos</a><br/>
+					<a href="Comedia.html">Comedia</a>
+				</div>
+			</div>
+			<a href="Restaurante.html">Restaurante</a>
+			<a class="actual" href="Pedido.html">Pedido</a>
+		</div>
+	</header>
+	
+	<main>
+		<form action="https://formsubmit.co/cinecinasa@gmail.com" method="post">
+		  
+			<div id="uno">
+			
+				<div class="barra">
+					<div class="actual">1</div>
+					<div>2</div>
+					<div>3</div>
+				</div>
+			
+				<h2>DATOS PERSONALES</h2><br/>
+				<span>Nombre</span><br/>
+				<input type="text" name="nombre"/>
+				<br/><br/>
+				<span>Apellidos</span><br/>
+				<input type="text" name="apellidos"/>
+				<br/><br/>
+				<span>Email</span><br/>
+				<input type="email" name="mail"/>
+				<br/><br/>
+				<a href="#dos">Siguiente</a>
+			</div>
+			
+			<div id="dos">
+				
+				<div class="barra">
+					<div>1</div>
+					<div class="actual">2</div>
+					<div>3</div>
+				</div>
+			
+				<h2>ENTRADAS</h2><br/>
+				<span>Día</span><br/>
+				<select name="dia" >
+					<option></option>
+					<option>Martes</option>
+					<option>Miércoles</option>
+					<option>Jueves (día del espectador)</option>
+					<option>Viernes</option>
+					<option>Sábado</option>
+					<option>Domingo</option>
+				</select><br/><br/>
+
+				<span>Película</span><br/>
+				<select name="pelicula" >
+					<option></option>
+					<optgroup label="Acción">
+						<option>Spider-Man: No Way Home</option>
+						<option>Uncharted</option>
+						<option>The Batman</option>
+					</optgroup>
+					<optgroup label="Infantil">
+						<option>Sonic 2, la película</option>
+						<option>Los tipos malos</option>
+						<option>Hotel Transilvania: Transformanía</option>
+					</optgroup>
+					<optgroup label="Terror">
+						<option>Candyman</option>
+						<option>Escape Room: Tournament of Champions</option>
+						<option>Old</option>
+					</optgroup>
+					<optgroup label="Clásicos">
+						<option>El padrino</option>
+						<option>Forrest Gump</option>
+						<option>Pulp Fiction</option>
+					</optgroup>
+					<optgroup label="Comedia">
+						<option>La ciudad perdida</option>
+						<option>Free Guy</option>
+						<option>Camera Café, la película</option>
+					</optgroup>
+				</select><br/><br/>
+					
+				<span>Sesión</span><br/>
+				<select name="sesion" >
+					<option></option>
+					<option>Primera sesión</option>
+					<option>Segunda sesión</option>
+				</select><br/><br/>
+					
+				<span>Entradas</span><br/>
+				<input type="number" name="entradas" min="1" max="10" step="1" /><br/><br/>
+				<a href="#uno">Anterior</a>
+				<a href="#tres">Siguiente</a>
+		  </div>
+		  
+		  <div id="tres">
+		  
+			<div class="barra">
+				<div>1</div>
+				<div>2</div>
+				<div class="actual">3</div>
+			</div>
+		  
+			<h2>COMIDA</h2><br/>
+			<span>Refrescos</span><br/>
+			<select name="refrescos">
+				<option></option>
+				<option>Agua</option>
+				<option>Coca-cola</option>
+				<option>Fanta naranja</option>
+				<option>Fanta limón</option>
+				<option>Nestea</option>
+				<option>Aquarius</option>
+			</select><br/><br/>
+				
+			<span>Aperitivos</span><br/>
+			<select name="aperitivos">
+				<option></option>
+				<optgroup label="Palomitas">
+					<option>Saladas</option>
+					<option>Mantequilla</option>
+					<option>Caramelo</option>
+					<option>Cheddar</option>
+				</optgroup>
+				<optgroup label="Gominolas">
+					<option>Bolsa de gominolas</option>
+					<option>Regalices</option>
+					<option>Snacks</option>
+					<option>Chocolatinas</option>
+				</optgroup>
+			</select><br/><br/>
+				
+			<span>Comida</span><br/>
+			<select name="comida">
+				<option></option>
+				<optgroup label="Hamburguesas">
+					<option>Simple</option>
+					<option>Doble</option>
+					<option>Especial</option>
+					<option>Vegetal</option>
+				</optgroup>
+				<optgroup label="Pizzas">
+					<option>Cuatro quesos</option>
+					<option>Jamon y queso</option>
+					<option>Barbacoa</option>
+					<option>Vegetal</option>
+				</optgroup>
+				<optgroup label="Bocadillos">
+					<option>Pollo alioli</option>
+					<option>Lomo</option>
+					<option>Bacon queso</option>
+					<option>Vegetal</option>
+				</optgroup>
+			</select><br/><br/>
+				
+			<span>Raciones</span><br/>
+			<select name="raciones">
+				<option></option>
+				<option>Patatas con salsa</option>
+				<option>Croquetas</option>
+				<option>Calamares</option>
+				<option>Alitas de pollo</option>
+			</select><br/><br/>
+			<a href="#dos">Anterior</a>
+			<input class="boton" type="submit" value="Enviar" onclick="enviar()"/>
+			</div>
+		</form>
+	</main>
+	
+	<script>
+			function enviar(){
+				swal("¿Desea confirmar el pedido?", {buttons: ["Si", "No"]});
+			}
+	</script>
+	
+	<footer>
+		<div class="todo">
+			<div>
+				<h2>Nuestras redes</h2>
+				<a href="https://twitter.com/CCinasa">Twitter</a><br/>
+				<a href="https://www.instagram.com/cinecinasa/">Instagram</a><br/>
+				<a href="https://www.facebook.com/profile.php?id=100080221811463">Facebok</a><br/>
+			</div>
+			
+			<div>
+				<h2>Ayuda</h2>
+				<p>Atención al cliente</p>
+				<p>Aviso legal</p>
+				<p>Política de Privacidad</p>
+			</div>
+		</div>
+		<address><img src="imagenes/copyright.png"/> El copyright de los posters y tráilers pertenecen a las correspondientes productoras y/o distribuidoras.</address>
+	</footer>
+</body>
+</html>
+
+

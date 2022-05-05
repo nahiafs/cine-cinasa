@@ -1,0 +1,123 @@
+/* css del header y footer de todas las páginas */
+body{
+	width:90%;
+	margin:auto;
+	padding:0px;
+	background:black;
+	box-sizing:border-box;
+	font-family:Calibri;
+	font-size:150%;
+}
+
+/* Header */
+header{
+	margin:20px;
+}
+
+img.inicio{
+	margin:auto;
+	animation:inicio 2s;
+}
+
+@keyframes inicio{
+	from{opacity:0; transform:scale(2,2);}
+	to{opacity:1;}
+}
+
+img{
+	width:100%;
+}
+
+header div{
+	display:inline-block;
+	background:black;
+	margin-top:20px;
+	animation:entradaMenu 2s;
+}
+
+@keyframes entradaMenu{
+	from{transform:scale(0.5, 0.5);}
+}
+
+div.contenido{
+	position:absolute;
+	display:none;
+	margin-top:0px;
+}
+
+div.contenedor:hover div.contenido{
+	display:block;
+}
+
+header a:hover{
+	background:url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB2ZXJzaW9uPSIxLjEi%0D%0AIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhs%0D%0AaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB3aWR0%0D%0AaD0iMzkwcHgiIGhlaWdodD0iNTBweCIgdmlld0JveD0iMCAwIDM5MCA1MCIgZW5hYmxlLWJhY2tn%0D%0Acm91bmQ9Im5ldyAwIDAgMzkwIDUwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBhdGggZmlsbD0i%0D%0Abm9uZSIgc3Ryb2tlPSIjZDk0ZjVjIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLW1pdGVybGlt%0D%0AaXQ9IjEwIiBkPSJNMCw0Ny41ODVjMCwwLDk3LjUsMCwxMzAsMAoJYzEzLjc1LDAsMjguNzQtMzgu%0D%0ANzc4LDQ2LjE2OC0xOS40MTZDMTkyLjY2OSw0Ni41LDI0My42MDMsNDcuNTg1LDI2MCw0Ny41ODVj%0D%0AMzEuODIxLDAsMTMwLDAsMTMwLDAiLz4KPC9zdmc+Cg==");
+	animation:menu 1s;
+	color:#d94f5c;
+	transform:scale(1.2, 1.2);
+}
+
+header a{
+	text-decoration:none;
+	text-align:center;
+	transition: background-position-x 0.9s linear;
+	font-weight:bold;
+	color:white;
+}
+
+a{
+	display:inline-block;
+	padding:10px;
+	width:150px;
+}
+
+@keyframes menu{
+	from{background-position-x: 390px;}
+}
+
+/* Main */
+main{
+	color:white;
+	margin-top:50px;
+	margin-bottom:50px;
+	border:solid white 2px;
+	animation:borde 1s linear infinite;
+	padding:20px;
+}
+
+@keyframes borde{
+	from{border:solid black 2px;};
+	to{border:solid white 2px;};
+}
+
+/* Footer */
+footer{
+	margin:20px;
+	color:white;
+}
+
+footer div.todo{
+	display:flex;
+	justify-content:space-around;
+	align-items:center;
+}
+
+footer h2{
+	border-bottom:solid #DEDE00 2px;
+	text-align:center;
+	color:#DEDE00;
+}
+
+footer a{
+	color:white;
+	text-decoration:none;
+	font-weight:bold;
+}
+
+address{
+	text-align:center;
+	margin:20px;
+}
+
+address img{
+	width:20px;
+}

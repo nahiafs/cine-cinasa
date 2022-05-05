@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8"/>
+	<title>Inicio</title>
+	<link rel="StyleSheet" href="estilos.css" type="text/css">
+	<link rel="icon" type="image/png" sizes="16x16"  href="imagenes/favicon.png">
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<style>
+		main h2{
+			text-align:center;
+			text-shadow:2px 2px 5px white;
+		}
+		
+		article{
+			margin:50px;
+		}
+	
+		table{
+			color:white;
+			border-collapse:collapse;
+			text-align:center;
+		}
+		
+		td{
+			height:80px;
+			width:10%;
+			color:#FBFD73;
+		}
+		
+		td.cerrado{
+			color:#FFA9A9;
+		}
+		
+		td.abierto{
+			color:#B6FFA9;
+		}
+		
+		td.espectador{
+			color:#A9E0FF;
+		}
+		
+		table:last-child{
+			margin:auto;
+		}
+		
+		div.informacion{
+			width:100%;
+			margin:auto;
+			overflow:hidden;
+		}
+		
+		div.informacion ul{
+			padding:0px;
+			display:flex;
+			width:400%;
+			animation:cambio 15s infinite;
+		}
+		
+		@keyframes cambio{
+			0%{margin-left:0;}
+			20%{margin-left:0;}
+			25%{margin-left:-100%;}
+			45%{margin-left:-100%;}
+			50%{margin-left:-200%;}
+			70%{margin-left:-200%;}
+			75%{margin-left:-300%;}
+			95%{margin-left:-300%;}
+		}
+		
+		div.informacion li{
+			list-style:none;
+			width:100%;
+		}
+		
+		div.informacion img{
+			width:100%;
+		}
+		
+		div.ruleta{
+			width:50%;
+			margin:auto;
+			text-align:center;
+		}
+		
+		img.ruleta{
+			width:100%;
+			animation:ruleta 5s linear infinite;
+		}
+		
+		@keyframes ruleta{
+			0%{transform:rotate(0deg);}
+			100%{transform:rotate(360deg);}
+		}
+		
+		div.ruleta input{
+			font-weight:bold;
+			width:25%;
+			height:50px;
+			font-size:100%;
+			margin-top:20px;
+			background:#DEDE00;
+			cursor:pointer;
+		}
+		
+		div.ruleta input:hover{
+			opacity:0.5;
+		}
+		
+		p{
+			text-align:center;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<img class="inicio" src="imagenes/fondo2.png"/>
+		<div>
+			<a class="actual" href="index.html">Inicio</a>
+			<div class="contenedor">
+				<a href="Cartelera.html">Cartelera</a>
+				<div class="contenido">
+					<a href="Accion.html">Acción</a><br/>
+					<a href="Infantil.html">Infantil</a><br/>
+					<a href="Terror.html">Terror</a><br/>
+					<a href="Clasicos.html">Clásicos</a><br/>
+					<a href="Comedia.html">Comedia</a>
+				</div>
+			</div>
+			<a href="Restaurante.html">Restaurante</a>
+			<a href="Pedido.html">Pedido</a>
+		</div>
+	</header>
+	
+	<main>
+		<div class="informacion">
+			<ul>
+				<li><img src="imagenes/info.png"/></li>
+				<li><img src="imagenes/info2.png"/></li>
+				<li><img src="imagenes/info3.png"/></li>
+				<li><img src="imagenes/info4.png"/></li>
+			</ul>
+		</div>
+	
+		<script>
+			var premios = ["nada", "nada", "nada", "nada", "entrada", "entrada", "refresco", "refresco", "refresco", "bocadillo", "bocadillo", "bocadillo"];
+
+			function tirar(){
+				var num = Math.round(Math.random()*11);	
+				
+				if(premios[num]=="nada"){
+					swal("Lo siento", "No has ganado nada", "error");
+				} else if(premios[num]=="entrada"){
+					swal("Enhorabuena", "Has ganado una " + premios[num] + "\n Código: 123ASD", "success");
+				} else if(premios[num]=="refresco"){
+					swal("Enhorabuena", "Has ganado un " + premios[num] + "\n Código: 789ZXC", "success");
+				} else {
+					swal("Enhorabuena", "Has ganado un " + premios[num] + "\n Código: 654FGH", "success");
+				}
+			}
+		</script>
+	
+		<article>
+			<h2>Ruleta de la suerte</h2>
+			<p>Tira la ruleta para poder ganar una entrada, un bocadillo o un refresco.</p>
+			<p>Canjea el código en taquilla para conseguir tu premio.</p>
+			<p>¡Suerte!</p>
+			<div class="ruleta">
+				<img class="ruleta" src="imagenes/ruleta.png"/>
+				<input type="button" value="TIRAR" onclick="tirar()"/>
+			</div>
+		</article>
+	
+		<article>
+			<h2>Calendario</h2>
+			<p>Comprueba los días que abrimos y cerramos.</p>
+			<p>Y recuerda, ¡el día del espectador es más barato!</p>
+			<table>
+				<tr>
+					<th>Lunes</th>
+					<th>Martes</th>
+					<th>Miércoles</th>
+					<th>Jueves</th>
+					<th>Viernes</th>
+					<th>Sábado</th>
+					<th>Domingo</th>
+				</tr>
+				<tr>
+					<td class="cerrado">Cerrado</td>
+					<td class="abierto">Abierto</td>
+					<td class="abierto">Abierto</td>
+					<td class="espectador">Día del espectador</td>
+					<td class="abierto">Abierto</td>
+					<td class="abierto">Abierto</td>
+					<td class="abierto">Abierto</td>
+				</tr>
+			</table>
+		</article>
+		
+		<article>
+			<h2>Precios y descuentos</h2>
+			<table>
+				<tr>
+					<th>Día normal</th>
+					<td>6.50€</td>
+				</tr>
+				<tr>
+					<th>Día del espectador</th>
+					<td>4.50€</td>
+				</tr>
+				<tr>
+					<th>Mayores de 60 y menores de 10</th>
+					<td>5.50€</td>
+				</tr>
+			</table>
+		</article>
+		<p>A las películas en 3D no les afectan los descuentos.</p>
+	</main>
+	
+	<footer>
+		<div class="todo">
+			<div>
+				<h2>Nuestras redes</h2>
+				<a href="https://twitter.com/CCinasa" target="_blank">Twitter</a><br/>
+				<a href="https://www.instagram.com/cinecinasa/" target="_blank">Instagram</a><br/>
+				<a href="https://www.facebook.com/profile.php?id=100080221811463" target="_blank">Facebok</a><br/>
+			</div>
+			
+			<div>
+				<h2>Ayuda</h2>
+				<p>Atención al cliente</p>
+				<p>Aviso legal</p>
+				<p>Política de Privacidad</p>
+			</div>
+		</div>
+		<address><img src="imagenes/copyright.png"/> El copyright de los posters y tráilers pertenecen a las correspondientes productoras y/o distribuidoras.</address>
+	</footer>
+</body>
+</html>
